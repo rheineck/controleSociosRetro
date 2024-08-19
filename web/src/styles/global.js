@@ -14,5 +14,18 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => theme.COLORS.GRAY_200};
     --webkit-font-smoothing: antialiased;
+    font-family: 'Inter';
+  }
+
+  button, a {
+    cursor: pointer;
+  }
+
+  h1 {
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+  }
+
+  span {
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 `
