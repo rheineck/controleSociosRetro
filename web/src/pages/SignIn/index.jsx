@@ -1,3 +1,5 @@
+import { EnvelopeSimple, LockSimple } from '@phosphor-icons/react'
+
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 
@@ -16,13 +18,21 @@ export function SignIn() {
         </div>
         <Form>
           <span>E-mail</span>
-            <Input placeholder="E-mail" />
+          <Input 
+            icon={EnvelopeSimple}
+            placeholder="Endereço de e-mail" 
+            type="text"
+          />
           <span>Senha</span>
-            <Input placeholder="Senha" />
-          <Button>
-            <span>Entrar na plataforma</span>
-          </Button>
+          <Input 
+            icon={LockSimple}
+            placeholder="Senha" 
+            type="password"
+          />
         </Form>
+        <Button>
+          Entrar na plataforma
+        </Button>
       </div>
     </Container>
   )

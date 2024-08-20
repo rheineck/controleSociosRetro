@@ -23,9 +23,15 @@ export default createGlobalStyle`
 
   h1 {
     color: ${({ theme }) => theme.COLORS.GRAY_100};
+    font-size: 32px;
+    font-weight: 600;
   }
 
   span {
     color: ${({ theme }) => theme.COLORS.GRAY_100};
+  }
+
+  textarea:focus, input:focus {
+    outline: none;
   }
 `

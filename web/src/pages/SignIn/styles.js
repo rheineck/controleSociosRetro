@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   .box {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: ${({ theme }) => theme.COLORS.GRAY_900};
     width: 531px;
@@ -17,8 +17,21 @@ export const Container = styled.div`
     padding: 64px;
   }
 
+  .brand {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .brand span {
     color: ${({ theme }) => theme.COLORS.GRAY_400};
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .brand h1 {
+    margin-bottom: 8px;
   }
 
   .brand img {
@@ -29,4 +42,13 @@ export const Container = styled.div`
 
 `
 
-export const Form = styled.form``
+export const Form = styled.form`
+  width: 100%;
+  margin-bottom: 16px;
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+`

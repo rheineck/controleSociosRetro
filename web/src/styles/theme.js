@@ -7,6 +7,7 @@ export default {
     GRAY_200: "#C4C4CC",
 
     RED: "#E21B1B",
+    HOVER_RED: "#E24C4C",
     BLACK: "#000000"
 
   }
