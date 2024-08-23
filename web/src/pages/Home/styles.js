@@ -4,13 +4,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
 
- 
   main {
     display: grid;
     grid-template-areas: "menu content";
     margin: 0;
     justify-content: start;
+    height: 100%;
   }
 
   .content {
@@ -21,13 +22,7 @@ export const Container = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.COLORS.BLACK};
-  }
-
-  hr {
-    background: ${({ theme }) => theme.COLORS.BLACK};
-    border: none;
-    height: 4px;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
   }
 
   .overview {
@@ -35,6 +30,8 @@ export const Container = styled.div`
     grid-template-areas: 
       "title title"
       "associates finance";
+    justify-content: space-between;
+    padding-bottom: 50px;
   }
 
   .overview .title {
@@ -42,18 +39,34 @@ export const Container = styled.div`
 
   }
 
-  .associates, .finance {
+  #associates, #finance {
     width: 440px;
     height: 280px;
     border-radius: 8px;
     background: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  .associates {
+  #associates {
     grid-area: associates;
   }
 
-  .finance {
+  #finance {
     grid-area: finance;
   }
+
+  .rapidAccess {
+    display: grid;
+    grid-template-areas: 
+      "title title title title"
+      "button button button button";
+    grid-template-columns: 220px 220px 220px 220px;
+    justify-content: space-between;
+  }
+
+  .rapidAccess h2, .rapidAccess button {
+    margin-bottom: 16px;
+  }
+
+
+
 `

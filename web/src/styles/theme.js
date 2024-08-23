@@ -9,7 +9,10 @@ export default {
     RED: "#E21B1B",
     HOVER_RED: "#E24C4C",
     BLACK: "#000000",
-    WHITE: "#FFFFFF"
+    WHITE: "#FFFFFF",
+
+    GREEN: "#1EFF00",
+    GREEN_BACKGROUND: "#04550651"
 
   }
 }

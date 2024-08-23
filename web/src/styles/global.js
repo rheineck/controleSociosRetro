@@ -15,6 +15,7 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.COLORS.GRAY_200};
     --webkit-font-smoothing: antialiased;
     font-family: 'Inter';
+    height: 100%;
   }
 
   button, a {
