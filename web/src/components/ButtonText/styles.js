@@ -8,6 +8,7 @@ export const Container = styled.button`
   justify-content: space-between;
 
   font-size: 20px;
+  cursor: ${({ isDisabled }) => !isDisabled ? "pointer" : "auto"};
 
   color: ${({ theme }) => theme.COLORS.GRAY_100};
 

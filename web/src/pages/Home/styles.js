@@ -16,8 +16,11 @@ export const Container = styled.div`
 
   .content {
     grid-area: content;
+    display: grid;
+    grid-template-areas: "overview rapidAccess";
     width: 100%;
-    margin: 60px;
+    height: fit-content;
+    margin: 40px 90px;
   }
 
   h1 {
@@ -25,48 +28,27 @@ export const Container = styled.div`
     margin-bottom: 32px;
   }
 
+  .rapidAccess h2 {
+    margin-bottom: 12px;
+  }
+
   .overview {
-    display: grid;
-    grid-template-areas: 
-      "title title"
-      "associates finance";
-    justify-content: space-between;
-    padding-bottom: 50px;
   }
 
-  .overview .title {
-    grid-area: title;
-
-  }
-
-  #associates, #finance {
+  #associates {
     width: 440px;
-    height: 280px;
+    height: 712px;
     border-radius: 8px;
     background: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  #associates {
-    grid-area: associates;
+  .associates, .cars, .reports, .finance {
+    margin-bottom: 20px;
   }
 
-  #finance {
-    grid-area: finance;
+  .rapidAccess button {
+    margin-bottom: 12px;
   }
-
-  .rapidAccess {
-    display: grid;
-    grid-template-areas: 
-      "title title title title"
-      "button button button button";
-    grid-template-columns: 220px 220px 220px 220px;
-    justify-content: space-between;
-  }
-
-  .rapidAccess h2, .rapidAccess button {
-    margin-bottom: 16px;
-  }
-
 
 
 `

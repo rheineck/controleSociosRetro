@@ -1,9 +1,10 @@
 import { Container } from './styles'
 
-export function ButtonText ({ title, icon: Icon, ...rest}) {
+export function ButtonText ({ title, isDisabled, icon: Icon, ...rest}) {
   return (
     <Container
       type='button'
+      isDisabled={isDisabled}
       {...rest}
     >
       {title}

@@ -38,8 +38,9 @@ export function Menu () {
         <hr />
         <ButtonText title="Painel" icon={CaretRight} />
         <ButtonText title="Sócios" icon={CaretRight} />
-        <ButtonText title="Carros" icon={CaretRight} />
-        <ButtonText title="Financeiro" icon={CaretRight} />
+        <ButtonText title="Carros" icon={CaretRight} isDisabled={true}/>
+        <ButtonText title="Financeiro" icon={CaretRight} isDisabled={true}/>
+        <ButtonText title="Meu Perfil" icon={CaretRight} />
       </div>
     </Container>
   )
