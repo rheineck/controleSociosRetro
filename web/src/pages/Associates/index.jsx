@@ -15,68 +15,91 @@ export function Associates() {
       <main>
         <Menu />
         <div className="newAssociate">
-          <h1>Novo Sócio</h1>
           <Form>
+            <header>Novo Sócio</header>
             <section>
-              <div className="name">
+              <div id="label">
                 <label for="name">Nome</label>
                 <input type="text" id="name" placeholder="Nome do Sócio" />
               </div>
-              <div className="maritalStatus">
+            </section>
+            <section>
+              <div id="label">
                 <label for="maritalStatus">Estado Civil</label>
-                <input type="text" id="maritalStatus" placeholder="Estado Civil" />
+                <select name="maritalStatus" id="maritalStatus">
+                  <option value="select">Selecionar</option>
+                  <option value="single">Solteiro</option>
+                  <option value="married">Casado</option>
+                  <option value="divorce">Divorciado</option>
+                  <option value="widower">Viúvo</option>
+                </select> 
               </div>
-              <div className="spouse">
+              <div id="label">
                 <label for="spouse">Conjugê</label>
                 <input type="text" id="spouse" placeholder="Nome do Conjugê" />
               </div>
-              <div className="address">
+            </section>
+            <section>
+              <div id="label">
                 <label for="address">Endereço</label>
                 <input type="text" id="address" placeholder="Ex.: Avenida Brasil"/>
               </div>
-              <div className="number">
+            </section>
+            <section>
+              <div id="label">
                 <label for="number">Número</label>
                 <input type="text" id="number" placeholder="Ex.: 57"/>
               </div>
-              <div className="district">
+              <div id="label">
                 <label for="district">Bairro</label>
                 <input type="text" id="district" placeholder="Ex.: Centro" />
               </div>
-              <div className="city">
+              <div id="label">
                 <label for="city">Cidade</label>
                 <input type="text" id="city" placeholder="Ex.: Lagoa Vermelha"/>
               </div>
-              <div className="state">
+            </section>
+            <section>
+              <div id="label">
                 <label for="state">Estado</label>
                 <input type="text" id="state" placeholder="Ex.: RS"/>
               </div>
-              <div className="cep">
+              <div id="label">
                 <label for="cep">CEP</label>
                 <input type="text" id="cep" placeholder="Ex.: 95300000" />
               </div>
-              <div className="cpf">
+              <div id="label">
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" placeholder="Ex.: 123.456.789-00"/>
               </div>
-              <div className="rg">
+            </section>
+            <section>
+              <div id="label">
                 <label for="rg">RG</label>
                 <input type="text" id="rg" placeholder="Ex.: 0000000000" />
               </div>
-              <div className="email">
+              <div id="label">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" placeholder="exemplo@exemplo.com"/>
               </div>
-              <div className="career">
+              <div id="label">
                 <label for="career">Profissão</label>
                 <input type="text" id="career" placeholder="Ex.: Engenheiro"/>
               </div>
-              <div className="status">
+            </section>
+            <section>
+              <div id="label">
                 <label for="status">Situação</label>
-                <input type="text" id="status" placeholder="Ativo, Licenciado ou Inativo"/>
+                <select name="status" id="status">
+                  <option value="select">Selecionar</option>
+                  <option value="active">Ativo</option>
+                  <option value="inactive">Inativo</option>
+                  <option value="licensed">Licenciado</option>
+                </select>
               </div>
-              <div className="photo">
+              <div id="label">
                 <label for="photo">Foto</label>
-                <input type="image" id="photo" src={placeholderImg} alt="" placeholder="Carregue uma imagem"/>
+                <input className="inputPhoto" type="file" id="photo"/>
               </div>
             </section>
           </Form>
