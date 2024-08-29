@@ -1,4 +1,4 @@
-import { CaretRight } from '@phosphor-icons/react'
+import { Link } from 'react-router-dom'
 
 import userPlaceholder from '../../assets/userPlaceholder.svg'
 
@@ -36,11 +36,15 @@ export function Menu () {
       <div className="menu">
         <h2>Menu</h2>
         <hr />
-        <ButtonText title="Painel" icon={CaretRight} />
-        <ButtonText title="Sócios" icon={CaretRight} />
-        <ButtonText title="Carros" icon={CaretRight} isDisabled={true}/>
-        <ButtonText title="Financeiro" icon={CaretRight} isDisabled={true}/>
-        <ButtonText title="Meu Perfil" icon={CaretRight} />
+        {/* <Link to="/"> */}
+          <ButtonText title="Painel" />
+        {/* </Link> */}
+        {/* <Link to="/associates"> */}
+          <ButtonText title="Sócios" />
+        {/* </Link> */}
+        <ButtonText title="Carros" isDisabled={true}/>
+        <ButtonText title="Financeiro" isDisabled={true}/>
+        <ButtonText title="Meu Perfil" />
       </div>
     </Container>
   )

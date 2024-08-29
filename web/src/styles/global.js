@@ -22,6 +22,10 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   h1 {
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     font-size: 32px;

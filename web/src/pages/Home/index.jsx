@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { Container } from './styles'
 
 import { Footer } from '../../components/Footer'
@@ -19,7 +21,9 @@ export function Home () {
           <div className="rapidAccess">
             <div className="associates">
               <h2>Sócios</h2>
-              <Button>Novo Sócio</Button>
+              {/* <Link to="/associates"> */}
+                <Button>Novo Sócio</Button>
+              {/* </Link> */}
               <Button>Acessar Registro</Button>
             </div>
             <div className="cars">
