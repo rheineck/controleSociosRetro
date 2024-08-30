@@ -4,11 +4,13 @@ const knex = require("../database/knex/index");
 class AssociatesController {
   async create(req, res) {
     const associateData = req.body;
+    const user_id = req.user.id;
 
-    // const [checkUserExists] = await knex("associates").select().where(associateData.cpf);
+    //const [checkUserExists] = await knex("associates").select().where(associateData.cpf);
 
-    // if (checkUserExists) {
-    // throw new AppError('Este associado já está cadastrado!');    // }
+    //if (checkUserExists) {
+    //  throw new AppError('Este associado já está cadastrado!');
+    //}
 
     await knex("associates").insert({
       name: associateData.name,
@@ -27,7 +29,9 @@ class AssociatesController {
       rg: associateData.rg,
       cpf: associateData.cpf,
       status: associateData.status,
-      phone: associateData.phone
+      phone: associateData.phone,
+      user_id,
+      isUser
     });
 
 

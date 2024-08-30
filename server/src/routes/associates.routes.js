@@ -1,11 +1,14 @@
 const { Router } = require("express");
 
-const AssociatesController = require("../controllers/AssociatesController")
+const AssociatesController = require("../controllers/AssociatesController");
+const ensureAuthenticated = require("../middleware/ensureAuthenticated");
 
 const associatesRoutes = Router();
 
 const associatesController = new AssociatesController();
 
-associatesRoutes.post("/", associatesController.create);
+associatesRoutes.use(ensureAuthenticated);
+
+associatesRoutes.post("/new", associatesController.create);
 
 module.exports = associatesRoutes;

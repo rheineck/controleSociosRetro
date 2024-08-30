@@ -18,6 +18,8 @@ exports.up = knex => knex.schema.createTable("associates", table => {
   table.text('status');
   table.text('phone');
   table.text('picture');
+  table.boolean('isUser');
+  table.integer('user_id');
   table.text('created_at').default(knex.fn.now());
   table.text('updated_at').default(knex.fn.now());
 })

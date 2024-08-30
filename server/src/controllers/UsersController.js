@@ -4,12 +4,12 @@ const knex = require('../database/knex/index');
 
 class UsersController {
   async create(req, res) {
-    const { name, email, password, position, isAdmin } = req.body;
+    const { name, email, cpf, password, position, isAdmin } = req.body;
 
     const [checkUserExists] = await knex("users").select().where({ email });
 
     if (checkUserExists) {
-      throw new AppError('Este email já está em uso!');
+      throw new AppError('Este usuário já existe!');
     }
 
     const hashedPassword = await hash(password, 8);
@@ -17,6 +17,7 @@ class UsersController {
     await knex("users").insert({
       name,
       email,
+      cpf,
       password: hashedPassword,
       position,
       isAdmin
