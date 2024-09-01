@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   grid-area: menu;
   background: ${({ theme }) => theme.COLORS.GRAY_800};
-  width: 338px;
+  max-width: 340px;
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   display: flex;
   flex-direction: column;

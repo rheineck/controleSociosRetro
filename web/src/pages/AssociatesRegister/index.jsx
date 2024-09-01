@@ -7,6 +7,8 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Menu } from "../../components/Menu";
 import { ButtonText } from "../../components/ButtonText";
+import { Button } from "../../components/Button";
+import { Tag } from "../../components/Tag";
 
 export function AssociatesRegister () {
   return (
@@ -17,20 +19,30 @@ export function AssociatesRegister () {
         <div className="content">
           <h1>Lista de Sócios</h1>
           <table>
-            <tr>
+            <thead>
               <th>Id</th>
               <th>Nome</th>
               <th>Cargo</th>
               <th>Situação</th>
               <th>Editar</th>
-            </tr>
+            </thead>
+            <tbody>
             <tr>
               <td>01</td>
               <td>Raphael Gilioli Heineck</td>
               <td>Sócio</td>
-              <td>Ativo</td>
-              <td><ButtonText icon={Pencil} /></td>
+              <td className="tags">
+                <Tag title="Ativo" />
+                <Tag title="Tesoureiro" />
+                <Tag title="Admin" />
+              </td>
+              <td>
+                <Button>
+                  <Pencil />
+                </Button>
+              </td>      
             </tr>
+            </tbody>
           </table>
         </div>
       </main>

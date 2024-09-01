@@ -12,7 +12,7 @@ export default {
     WHITE: "#FFFFFF",
 
     GREEN: "#1EFF00",
-    GREEN_BACKGROUND: "#04550651"
+    GREEN_BACKGROUND: "#274e13"
 
   }
 }
