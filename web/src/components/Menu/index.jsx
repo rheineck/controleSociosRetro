@@ -36,12 +36,12 @@ export function Menu () {
       <div className="menu">
         <h2>Menu</h2>
         <hr />
-        {/* <Link to="/"> */}
+        <Link to="/">
           <ButtonText title="Painel" />
-        {/* </Link> */}
-        {/* <Link to="/associates"> */}
+        </Link>
+        <Link to="/associates">
           <ButtonText title="Sócios" />
-        {/* </Link> */}
+        </Link>
         <ButtonText title="Carros" isDisabled={true}/>
         <ButtonText title="Financeiro" isDisabled={true}/>
         <ButtonText title="Meu Perfil" />

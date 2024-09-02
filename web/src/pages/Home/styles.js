@@ -9,6 +9,7 @@ export const Container = styled.div`
   main {
     display: grid;
     grid-template-areas: "menu content";
+    grid-template-columns: 340px;
     margin: 0;
     justify-content: start;
     height: 100%;

@@ -6,7 +6,6 @@ import { Container } from "./styles";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Menu } from "../../components/Menu";
-import { ButtonText } from "../../components/ButtonText";
 import { Button } from "../../components/Button";
 import { Tag } from "../../components/Tag";
 
@@ -37,9 +36,11 @@ export function AssociatesRegister () {
                 <Tag title="Admin" />
               </td>
               <td>
-                <Button>
-                  <Pencil />
-                </Button>
+                <Link to="/associates/edit">
+                  <Button>
+                    <Pencil />
+                  </Button>
+                </Link>
               </td>      
             </tr>
             </tbody>

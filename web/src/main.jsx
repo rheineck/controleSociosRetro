@@ -12,8 +12,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <Routes /> */}
-      <AssociatesRegister />
+      <Routes />
     </ThemeProvider>
   </StrictMode>
 )

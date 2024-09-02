@@ -14,11 +14,12 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 90vh;
-    padding: 60px 80px;
+    padding: 80px 100px;
   }
 
   h1 {
     color: ${({ theme }) => theme.COLORS.GRAY_800};
+    margin-bottom: 12px;
   }
 
   svg {
@@ -26,14 +27,26 @@ export const Container = styled.div`
   }
 
   table {
-    border: 2px solid ${({ theme }) => theme.COLORS.GRAY_600};
+    outline: 2px solid ${({ theme }) => theme.COLORS.GRAY_600};
+    border-collapse: collapse;
     border-radius: 8px;
+    width: 100%;
+  }
+
+  thead, tbody tr {
+    display: table;
+    table-layout: fixed;
     width: 100%;
   }
 
   thead {
     background-color: ${({ theme }) => theme.COLORS.GRAY_400};
     font-size: 18px;
+    height: 36px;
+
+    th {
+      border: none;
+    }
   }
 
   tr {
@@ -44,9 +57,9 @@ export const Container = styled.div`
   }
 
   td:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     
     button {
       height: 28px;

@@ -22,13 +22,7 @@ export const Container = styled.div`
   }
   
   .buttons {
-    display: flex;
-    margin-right: 20px;
-    margin-left: 400px;
-  }
-
-  .buttons button:first-child {
-    margin-right: 47px;
+    width: 100px;
   }
   `
 

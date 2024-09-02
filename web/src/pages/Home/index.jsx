@@ -21,10 +21,12 @@ export function Home () {
           <div className="rapidAccess">
             <div className="associates">
               <h2>Sócios</h2>
-              {/* <Link to="/associates"> */}
+              <Link to="/associates/new">
                 <Button>Novo Sócio</Button>
-              {/* </Link> */}
-              <Button>Acessar Registro</Button>
+              </Link>
+              <Link to="/associates">
+                <Button>Acessar Registro</Button>
+              </Link>
             </div>
             <div className="cars">
               <h2>Carros</h2>
