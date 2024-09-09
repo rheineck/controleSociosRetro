@@ -24,7 +24,7 @@ export const Container = styled.div`
   .buttons {
     width: 100px;
   }
-  `
+`
 
 export const Form = styled.form`
 

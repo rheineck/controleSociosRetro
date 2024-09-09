@@ -1,18 +1,21 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Container = styled.div`
-  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 
   main {
+    grid-area: main;
     display: grid;
     grid-template-areas: "menu content";
     grid-template-columns: 340px;
-    margin: 0;
     justify-content: start;
-    height: 100%;
+    height: 90vh;
   }
 
   .content {
