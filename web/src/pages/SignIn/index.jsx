@@ -1,12 +1,23 @@
-import { EnvelopeSimple, LockSimple } from '@phosphor-icons/react'
+import { useState } from "react";
+import { EnvelopeSimple, LockSimple } from "@phosphor-icons/react";
 
-import { Button } from '../../components/Button'
-import { Input } from '../../components/Input'
+import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
 
-import { Container, Form } from './styles'
-import LogoImg from '../../assets/logo.png'
+import { useAuth } from "../../hooks/auth";
+
+import { Container, Form } from './styles';
+import LogoImg from '../../assets/logo.png';
 
 export function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { signIn } = useAuth();
+
+  function handleSignIn() {
+    signIn({ email, password });
+  }
 
   return (
     <Container>
@@ -22,15 +33,17 @@ export function SignIn() {
             icon={EnvelopeSimple}
             placeholder="Endereço de e-mail" 
             type="text"
+            onChange={e => setEmail(e.target.value)}
           />
           <span>Senha</span>
           <Input 
             icon={LockSimple}
             placeholder="Senha" 
             type="password"
+            onChange={e => setPassword(e.target.value)}
           />
         </Form>
-        <Button>
+        <Button onClick={handleSignIn}>
           Entrar na plataforma
         </Button>
       </div>

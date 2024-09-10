@@ -1,14 +1,32 @@
-import { Container, Form } from "./styles";
+import { useState } from "react";
+import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
-import placeholderImg from '../../assets/userPlaceholder.svg'
+import { Container, Form } from "./styles";
 
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import { Menu } from '../../components/Menu'
-import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
 export function Associates() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [maritalStatus, setMaritalStatus] = useState("");
+  const [spouse, setSpouse] = useState("");
+  const [address, setAddress] = useState("");
+  const [number, setNumber] = useState("");
+  const [district, setDistrict] = useState("");
+  const [city, setCity] = useState(""); 
+  const [state, setState] = useState("");
+  const [cep, setCep] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [rg, setRg] = useState("");
+  const [email, setEmail] = useState("");
+  const [career, setCareer] = useState("");
+  const [status, setStatus] = useState("");
+
+
   return(
     <Container>
       <Header />
