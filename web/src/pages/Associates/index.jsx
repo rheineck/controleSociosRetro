@@ -28,7 +28,7 @@ export function Associates() {
 
   function handleAddAssociates() {
     if(!name || !cpf || !rg) {
-      alert("preencha todos os campos!");
+      alert("Preencha todos os campos!");
       return;
     }
 
@@ -49,7 +49,7 @@ export function Associates() {
     formData.append("career", career);
     formData.append("status", status);
 
-    api.post("/new", formData)
+    api.post("/associates/new", formData)
     .then(() => {
       alert("Associado cadastrado com sucesso!");
       navigate(-1);
