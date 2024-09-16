@@ -31,7 +31,7 @@ class AssociatesController {
       status: associateData.status,
       phone: associateData.phone,
       user_id,
-      isUser
+      // isUser
     });
 
 

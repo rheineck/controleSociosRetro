@@ -32,24 +32,39 @@ export function Associates() {
       return;
     }
 
-    const formData = new FormData();
+    // const formData = new FormData();
 
-    formData.append("name", name);
-    formData.append("maritalStatus", maritalStatus);
-    formData.append("spouse", spouse);
-    formData.append("address", address);
-    formData.append("number", number);
-    formData.append("district", district);
-    formData.append("city", city);
-    formData.append("state", state);
-    formData.append("cep", cep);
-    formData.append("cpf", cpf);
-    formData.append("rg", rg);
-    formData.append("email", email);
-    formData.append("career", career);
-    formData.append("status", status);
+    // formData.append("name", name);
+    // formData.append("maritalStatus", maritalStatus);
+    // formData.append("spouse", spouse);
+    // formData.append("address", address);
+    // formData.append("number", number);
+    // formData.append("district", district);
+    // formData.append("city", city);
+    // formData.append("state", state);
+    // formData.append("cep", cep);
+    // formData.append("cpf", cpf);
+    // formData.append("rg", rg);
+    // formData.append("email", email);
+    // formData.append("career", career);
+    // formData.append("status", status);
 
-    api.post("/associates/new", formData)
+    api.post("/associates/new", {
+      name,
+      maritalStatus,
+      spouse,
+      address,
+      number,
+      district,
+      city,
+      state,
+      cep,
+      cpf,
+      rg,
+      email,
+      career,
+      status
+    })
     .then(() => {
       alert("Associado cadastrado com sucesso!");
       navigate(-1);
@@ -71,7 +86,7 @@ export function Associates() {
                   type="text" 
                   id="name" 
                   placeholder="Nome do Sócio" 
-                  onChange={e => setName(e.target.value)}
+                  onChange={event => setName(event.target.value)}
                 />
               </div>
             </section>

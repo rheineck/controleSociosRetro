@@ -1,6 +1,6 @@
 const { verify } = require("jsonwebtoken");
 const AppError = require("../utils/AppError");
-const AuthConfig = require("../config/auth");
+const authConfig = require("../config/auth");
 
 function ensureAuthenticated(req, res, next) {
   const authHeader = req.headers.authorization;
@@ -12,7 +12,7 @@ function ensureAuthenticated(req, res, next) {
   const [, token] = authHeader.split(" ");
 
   try {
-    const { sub: user_id } = verify(token, AuthConfig.jwt.secret);
+    const { sub: user_id } = verify(token, authConfig.jwt.secret);
     req.user = {
       id: Number(user_id)
     };
